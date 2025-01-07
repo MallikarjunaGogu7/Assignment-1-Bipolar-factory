@@ -1,0 +1,49 @@
+.loading-spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #3498db;
+  border-radius: 100%;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1.0s;
+}
+
+.icon-2{
+  background-color: rgb(220, 217, 217);
+}
+.card-img-top {
+  background-color: rgb(235, 235, 235);
+  
+  
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+  } 50% {
+    transform: scale(1);
+  }
+}
