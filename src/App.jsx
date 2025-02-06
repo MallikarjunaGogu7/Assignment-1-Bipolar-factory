@@ -17,8 +17,10 @@ const App = () => {
           liked: false, 
           isEditing: false, // Track edit mode
         }));
-        setUsers(updatedUsers);
-        setLoading(false);
+        setTimeout(() => {
+          setUsers(updatedUsers);
+          setLoading(false);
+        }, 2000); //  Added a 3-second delay
       } catch (error) {
         console.error('Error fetching users:', error);
         setLoading(false);

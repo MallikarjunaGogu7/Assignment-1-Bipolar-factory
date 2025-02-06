@@ -53,6 +53,52 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.card:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 0.3s smooth;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7); /* Optional background overlay */
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot1, .dot2 {
+  width: 15px;
+  height: 15px;
+  background-color: #007bff; /* Bootstrap primary color */
+  border-radius: 50%;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.dot2 {
+  animation-delay: -0.75s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
